@@ -1,7 +1,7 @@
 
-pinMode(D17,"input",false);
+pinMode(D20,"input",false);
 function KickWd(){
-    if(!D17.read())E.kickWatchdog();
+    if(!D20.read())E.kickWatchdog();
 }
 var wdint=setInterval(KickWd,5000); // 5 secs
 E.enableWatchdog(20, false); // 20 secs
@@ -92,7 +92,7 @@ setWatch(() =>{
         load("launch.js");
     else
         P8.wake()
-  },D17,{repeat:true,edge:"rising"});
+  },D20,{repeat:true,edge:"rising"});
 
 P8.init();
 eval(STOR.read("lcd.js"));
