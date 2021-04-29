@@ -87,8 +87,8 @@ function ST7789() {
 
 //screen brightness function
 function brightness(v) {
-    v=v>7?1:v;	
-	digitalWrite([D23,D22,D14],7-v);
+    v=v>9?1:v;	
+	analogWrite(D14,(10-v)/10);
 }
 
 E.showMessage = function(msg,title) {
